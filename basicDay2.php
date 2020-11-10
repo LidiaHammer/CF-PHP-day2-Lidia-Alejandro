@@ -41,7 +41,7 @@ Surname: <input type ="text" name="surname" />
 </form> -->
 
 <!-- Exercise7part1: -->
-<form action="basicDay2.php" method ="post">
+<!-- <form action="basicDay2.php" method ="POST">
    <p>
        <label  for="firstName">First Name:</label>
        <input type="text" name= "firstname" >
@@ -55,7 +55,7 @@ Surname: <input type ="text" name="surname" />
        <input  type="text" name= "email" >
    </p>
    <input type= "submit" value="Submit">
-</form>
+</form> -->
 
   <?php 
 // Exercise2part2:
@@ -84,11 +84,11 @@ Surname: <input type ="text" name="surname" />
 // newFunction(20,5);
 
 // Exercise4
-$hostname= "localhost";
-$username= "root";
-$password= "";
-$dbname= "dogs";
-$conn = mysqli_connect($hostname, $username, $password,$dbname);
+// $hostname= "localhost";
+// $username= "root";
+// $password= "";
+// $dbname= "dogs";
+// $conn = mysqli_connect($hostname, $username, $password,$dbname);
 
 // Exercise5
 // $sql = "CREATE TABLE owners(
@@ -104,22 +104,24 @@ $conn = mysqli_connect($hostname, $username, $password,$dbname);
 // VALUES ('John', 'Doe', 'john@doe.com')";
 
 // Exercise7part2:
-$fname = $_POST["firstname"];
-$lname = $_POST["lastname"];
-$email = $_POST["email"];
+// if(isset($_POST["firstname"])){
+// $fname = $_POST["firstname"];
+// $lname = $_POST["lastname"];
+// $email = $_POST["email"];
 
-$sql = "INSERT INTO owners (firstname, lastname, email) VALUES ('$fname', '$lname', '$email')";
-if (mysqli_query($conn, $sql)) {
-  echo "<h1>New record created.<h1>";
-} else {
-  echo "<h1>Record creation error for: </h1>" .
-       "<p>"  . $sql . "</p>" .
-       mysqli_error($conn);
-}
-mysqli_close($conn);
-echo  "</body></html>";
+// $sql = "INSERT INTO owners (firstname, lastname, email) VALUES ('$fname', '$lname', '$email')";
+// if (mysqli_query($conn, $sql)) {
+//   echo "<h1>New record created.<h1>";
+// } else {
+//   echo "<h1>Record creation error for: </h1>" .
+//        "<p>"  . $sql . "</p>" .
+//        mysqli_error($conn);
+// }
+// mysqli_close($conn);
+// echo  "</body></html>";
 
-echo $fname;
+// echo $fname;
+//  }
   ?>
 </body>
 </html>
